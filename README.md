@@ -3,7 +3,8 @@ PHP7.3+Nginx+PHPMyAdmin+MySQL5.7
 
 # 実装時に起きたエラー
 
-PHPMyAdminでvolumes指定するとエラーになった為削除
+docker-composeのphpmyadminでvolumes指定するとエラーになった為volumesを削除。
+volumesを削除すればエラーは消えた為、「session.save_path」で指定されているディレクトリへの編集権限がないのが原因ではなさそう。  
 
 docker-compose.yml：
 ```

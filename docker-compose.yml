@@ -20,6 +20,7 @@ services:
     build: ./db
     volumes:
       - "./mysql:/var/lib/mysql"
+      - ./data:/var/www
     environment:
       - MYSQL_ROOT_PASSWORD=password
     command: --innodb-use-native-aio=0
